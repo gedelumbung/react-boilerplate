@@ -22,13 +22,15 @@ class Users extends Component {
 
   onSetParams = (key, value) => {
     return () => {
-      this.setParams(key, value);
+      let params = {};
+      params[key] = value;
+      this.setParams(params);
     };
   };
 
-  setParams = (key, value) => {
+  setParams = (filteredParams) => {
     let { params } = this.state;
-    params[key] = value;
+    params = {...params, ...filteredParams};
     this.setState({
       params
     });
@@ -38,7 +40,10 @@ class Users extends Component {
   onSubmitFilter = e => {
     if (e.charCode == 13 || e.charCode == undefined) {
       const { name, value } = e.target;
-      this.setParams(name, value);
+      let params = {};
+      params[name] = value;
+      params['_page'] = 1;
+      this.setParams(params);
     }
   };
 

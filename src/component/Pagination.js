@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { last } from "lodash";
+import { last, get } from "lodash";
 
 const Pagination = ({ onClick, paginations, params }) => {
-  const lastPaginationItem = last(paginations);
-
+  const lastPage = get(last(paginations), 'page', 1);
   return (
     <nav
       className="pagination is-small"
@@ -27,7 +26,7 @@ const Pagination = ({ onClick, paginations, params }) => {
           );
         })}
       </ul>
-      <a className="pagination-next">Current Page : {params._page} of {lastPaginationItem && lastPaginationItem.page}</a>
+      <a className="pagination-next">Current Page : {params._page} of {lastPage}</a>
     </nav>
   );
 };
