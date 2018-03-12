@@ -1,45 +1,59 @@
-import React from "react";
+import PropTypes from "prop-types";
+import React, { Component, Fragment } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 import { Link } from "react-router-dom";
 
-const SidebarMenu = () => {
-  return (
-    <aside className="column is-2 aside">
-      <nav className="menu">
-        <p className="menu-label">General</p>
-        <ul className="menu-list">
-          <li>
-            <Link to="/dashboard">
-              <span className="icon is-small">
-                <i className="fa fa-tachometer" />
-              </span>{" "}
-              Dashboard
-            </Link>
-          </li>
-        </ul>
-        <p className="menu-label">Administration</p>
-        <ul className="menu-list">
-          <li>
-            <a>
-              <i className="fa fa-cog" /> Settings
-            </a>
-            <ul>
-              <li>
-                <Link to="/users">
-                  Users
-                </Link>
-                <Link to="/roles">
-                  Roles
-                </Link>
-                <Link to="/permissions">
-                  Permissions
-                </Link>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-  );
+class SidebarMenu extends Component {
+  render() {
+    const { menus } = this.props;
+    return (
+      <aside className="column is-2 aside">
+        <nav className="menu">
+          {menus.map((menu, index) => {
+            return (
+              <Fragment key={index}>
+                <p className="menu-label">{menu.group_name}</p>
+                <ul className="menu-list">
+                  {menu.menu.map((child, index) => {
+                    return (
+                      <li key={index}>
+                        <Link to={`${child.url}`}>
+                          <span className="icon is-small">
+                            <i className="fa fa-tachometer" />
+                          </span>{" "}
+                          {child.title}
+                        </Link>
+                        <ul>
+                          <li>
+                          {child.childs.map((sub, index) => {
+                            return (
+                              <Link key={index} to={`${sub.url}`}>{sub.title}</Link>
+                            );
+                          })}
+                          </li>
+                        </ul>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </Fragment>
+            );
+          })}
+        </nav>
+      </aside>
+    );
+  }
+}
+
+SidebarMenu.propTypes = {
+  menus: PropTypes.array.isRequired
 };
 
-export default SidebarMenu;
+function mapStateToProps(state) {
+  return {
+    ...state.menu
+  };
+}
+
+export default connect(mapStateToProps)(SidebarMenu);

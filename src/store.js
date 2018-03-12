@@ -14,9 +14,7 @@ export function configureStore(initialState = {}) {
         })
       : compose;
 
-  const store = createStore(rootReducer, initialState, composeEnhancers(...enhancers));
-
-  return store;
+  return createStore(rootReducer, initialState, composeEnhancers(...enhancers));
 }
 
 const store = configureStore();

@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import { Route } from "react-router-dom";
 import SidebarMenu from "./SidebarMenu";
 import TopNavigation from "./TopNavigation";
-import Footer from "./Footer";
 
 const Dashboard = ({ component: Component, ...rest }) => {
   return (

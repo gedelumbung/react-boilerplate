@@ -6,6 +6,8 @@ import { unionWith, isEqual } from "lodash";
 
 import * as actions from "../../actions/users";
 import Header from "../../component/Layout/Header";
+import Modal from "../../component/Modal";
+import Form from "../../component/User/Form";
 import Filter from "../../component/User/Filter";
 import TableItem from "../../component/User/TableItem";
 import Pagination from "../../component/Pagination";
@@ -13,10 +15,12 @@ import Pagination from "../../component/Pagination";
 class Users extends Component {
   state = {
     params: {
-      _limit: 8,
+      _limit: 15,
       _page: 1,
       name_like: "",
-      email_like: ""
+      email_like: "",
+      isOpen: "",
+      selectedItem: null
     }
   };
 
@@ -28,9 +32,9 @@ class Users extends Component {
     };
   };
 
-  setParams = (filteredParams) => {
+  setParams = filteredParams => {
     let { params } = this.state;
-    params = {...params, ...filteredParams};
+    params = { ...params, ...filteredParams };
     this.setState({
       params
     });
@@ -42,9 +46,24 @@ class Users extends Component {
       const { name, value } = e.target;
       let params = {};
       params[name] = value;
-      params['_page'] = 1;
+      params["_page"] = 1;
       this.setParams(params);
     }
+  };
+
+  onOpenModal = item => {
+    return () => {
+      this.setState({
+        isOpen: "is-active",
+        selectedItem: item
+      });
+    };
+  };
+
+  onCloseModal = () => {
+    this.setState({
+      isOpen: ""
+    });
   };
 
   componentDidMount() {
@@ -54,10 +73,17 @@ class Users extends Component {
 
   render() {
     const { users, loading, pagination_links } = this.props;
-    const { params } = this.state;
+    const { params, isOpen, selectedItem } = this.state;
 
     return (
       <Fragment>
+        {selectedItem && <Modal
+          isOpen={isOpen}
+          onCloseModal={this.onCloseModal}
+          item={selectedItem}
+          component={Form}
+          title="User"
+        />}
         <Header title="Users" icon="fa fa-users" />
         <Filter onSubmit={this.onSubmitFilter} />
         <div className="container is-multiline">
@@ -73,7 +99,13 @@ class Users extends Component {
               </thead>
               <tbody>
                 {users.map((user, index) => {
-                  return <TableItem user={user} key={index} />;
+                  return (
+                    <TableItem
+                      user={user}
+                      key={index}
+                      onOpenModal={this.onOpenModal}
+                    />
+                  );
                 })}
               </tbody>
             </table>

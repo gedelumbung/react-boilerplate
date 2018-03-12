@@ -1,19 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const TableItem = ({ user }) => {
+const TableItem = ({ onOpenModal, user }) => {
   return (
     <tr>
       <td>{user.id}</td>
       <td>{user.name}</td>
       <td>{user.email}</td>
       <td>
-        <Link to={`/users/${user.id}/edit`}>
+        <a onClick={onOpenModal(user)}>
           <i className="fa fa-edit" /> Edit
-        </Link>{" "}
-        <Link to={`/users/${user.id}/delete`}>
-          <i className="fa fa-trash" /> Delete
-        </Link>
+        </a>
+        {' '}
+        <a>
+          <i className="fa fa-edit" /> Delete
+        </a>
       </td>
     </tr>
   );
