@@ -2,8 +2,11 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div>
-      Loading...
+    <div className="loading">
+      <div className="lds-ripple">
+        <div />
+        <div />
+      </div>
     </div>
   );
 };

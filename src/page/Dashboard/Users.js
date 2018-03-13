@@ -5,6 +5,7 @@ import { bindActionCreators } from "redux";
 import { unionWith, isEqual } from "lodash";
 
 import * as actions from "../../actions/users";
+import Loading from "../../component/Loading";
 import Header from "../../component/Layout/Header";
 import Modal from "../../component/Modal";
 import Form from "../../component/User/Form";
@@ -77,13 +78,15 @@ class Users extends Component {
 
     return (
       <Fragment>
-        {selectedItem && <Modal
-          isOpen={isOpen}
-          onCloseModal={this.onCloseModal}
-          item={selectedItem}
-          component={Form}
-          title="User"
-        />}
+        {selectedItem && (
+          <Modal
+            isOpen={isOpen}
+            onCloseModal={this.onCloseModal}
+            item={selectedItem}
+            component={Form}
+            title="User"
+          />
+        )}
         <Header title="Users" icon="fa fa-users" />
         <Filter onSubmit={this.onSubmitFilter} />
         <div className="container is-multiline">
@@ -98,15 +101,21 @@ class Users extends Component {
                 </tr>
               </thead>
               <tbody>
-                {users.map((user, index) => {
-                  return (
-                    <TableItem
-                      user={user}
-                      key={index}
-                      onOpenModal={this.onOpenModal}
-                    />
-                  );
-                })}
+                {loading ? (
+                  <Loading />
+                ) : users.length > 0 ? (
+                  users.map((user, index) => {
+                    return (
+                      <TableItem
+                        user={user}
+                        key={index}
+                        onOpenModal={this.onOpenModal}
+                      />
+                    );
+                  })
+                ) : (
+                  "No data..."
+                )}
               </tbody>
             </table>
             <Pagination
