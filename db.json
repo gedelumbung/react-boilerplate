@@ -1,0 +1,385 @@
+{
+  "users": [
+    {
+      "name": "Gede",
+      "email": "gede@mail.com",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "John Doe",
+      "email": "johndoe@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Maverick Vinales",
+      "email": "maverick@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Andrea Ianone",
+      "email": "andrea@gmail.com"
+    },
+    {
+      "id": 5,
+      "name": "Marc Marquez",
+      "email": "marc@gmail.com"
+    },
+    {
+      "id": 6,
+      "name": "Gede Lumbung",
+      "email": "gedesumawijaya@gmail.com"
+    },
+    {
+      "id": 7,
+      "name": "John Doe",
+      "email": "johndoe@gmail.com"
+    },
+    {
+      "id": 8,
+      "name": "Maverick Vinales",
+      "email": "maverick@gmail.com"
+    },
+    {
+      "id": 9,
+      "name": "Andrea Ianone",
+      "email": "andrea@gmail.com"
+    },
+    {
+      "id": 10,
+      "name": "Marc Marquez",
+      "email": "marc@gmail.com"
+    },
+    {
+      "id": 11,
+      "name": "Gede Lumbung",
+      "email": "gedesumawijaya@gmail.com"
+    },
+    {
+      "id": 12,
+      "name": "John Doe",
+      "email": "johndoe@gmail.com"
+    },
+    {
+      "id": 13,
+      "name": "Maverick Vinales",
+      "email": "maverick@gmail.com"
+    },
+    {
+      "id": 14,
+      "name": "Andrea Ianone",
+      "email": "andrea@gmail.com"
+    },
+    {
+      "id": 15,
+      "name": "Marc Marquez",
+      "email": "marc@gmail.com"
+    },
+    {
+      "id": 16,
+      "name": "Gede Lumbung",
+      "email": "gedesumawijaya@gmail.com"
+    },
+    {
+      "id": 17,
+      "name": "John Doe",
+      "email": "johndoe@gmail.com"
+    },
+    {
+      "id": 18,
+      "name": "Maverick Vinales",
+      "email": "maverick@gmail.com"
+    },
+    {
+      "id": 19,
+      "name": "Andrea Ianone",
+      "email": "andrea@gmail.com"
+    },
+    {
+      "id": 20,
+      "name": "Marc Marquez",
+      "email": "marc@gmail.com"
+    },
+    {
+      "id": 21,
+      "name": "Gede Lumbung",
+      "email": "gedesumawijaya@gmail.com"
+    },
+    {
+      "id": 22,
+      "name": "John Doe",
+      "email": "johndoe@gmail.com"
+    },
+    {
+      "id": 23,
+      "name": "Maverick Vinales",
+      "email": "maverick@gmail.com"
+    },
+    {
+      "id": 24,
+      "name": "Andrea Ianone",
+      "email": "andrea@gmail.com"
+    },
+    {
+      "id": 25,
+      "name": "Marc Marquez",
+      "email": "marc@gmail.com"
+    },
+    {
+      "id": 26,
+      "name": "Gede Lumbung",
+      "email": "gedesumawijaya@gmail.com"
+    },
+    {
+      "id": 27,
+      "name": "John Doe",
+      "email": "johndoe@gmail.com"
+    },
+    {
+      "id": 28,
+      "name": "Maverick Vinales",
+      "email": "maverick@gmail.com"
+    },
+    {
+      "id": 29,
+      "name": "Andrea Ianone",
+      "email": "andrea@gmail.com"
+    },
+    {
+      "id": 30,
+      "name": "Marc Marquez",
+      "email": "marc@gmail.com"
+    },
+    {
+      "id": 31,
+      "name": "Gede Lumbung",
+      "email": "gedesumawijaya@gmail.com"
+    },
+    {
+      "id": 32,
+      "name": "John Doe",
+      "email": "johndoe@gmail.com"
+    },
+    {
+      "id": 33,
+      "name": "Maverick Vinales",
+      "email": "maverick@gmail.com"
+    },
+    {
+      "id": 34,
+      "name": "Andrea Ianone",
+      "email": "andrea@gmail.com"
+    },
+    {
+      "id": 35,
+      "name": "Marc Marquez",
+      "email": "marc@gmail.com"
+    },
+    {
+      "id": 36,
+      "name": "Gede Lumbung",
+      "email": "gedesumawijaya@gmail.com"
+    },
+    {
+      "id": 37,
+      "name": "John Doe",
+      "email": "johndoe@gmail.com"
+    },
+    {
+      "id": 38,
+      "name": "Maverick Vinales",
+      "email": "maverick@gmail.com"
+    },
+    {
+      "id": 39,
+      "name": "Andrea Ianone",
+      "email": "andrea@gmail.com"
+    },
+    {
+      "id": 40,
+      "name": "Marc Marquez",
+      "email": "marc@gmail.com"
+    },
+    {
+      "id": 41,
+      "name": "Gede Lumbung",
+      "email": "gedesumawijaya@gmail.com"
+    },
+    {
+      "id": 42,
+      "name": "John Doe",
+      "email": "johndoe@gmail.com"
+    },
+    {
+      "id": 43,
+      "name": "Maverick Vinales",
+      "email": "maverick@gmail.com"
+    },
+    {
+      "id": 44,
+      "name": "Andrea Ianone",
+      "email": "andrea@gmail.com"
+    },
+    {
+      "id": 45,
+      "name": "Marc Marquez",
+      "email": "marc@gmail.com"
+    },
+    {
+      "id": 46,
+      "name": "Gede Lumbung",
+      "email": "gedesumawijaya@gmail.com"
+    },
+    {
+      "id": 47,
+      "name": "John Doe",
+      "email": "johndoe@gmail.com"
+    },
+    {
+      "id": 48,
+      "name": "Maverick Vinales",
+      "email": "maverick@gmail.com"
+    },
+    {
+      "id": 49,
+      "name": "Andrea Ianone",
+      "email": "andrea@gmail.com"
+    },
+    {
+      "id": 50,
+      "name": "Marc Marquez",
+      "email": "marc@gmail.com"
+    },
+    {
+      "id": 51,
+      "name": "Gede Lumbung",
+      "email": "gedesumawijaya@gmail.com"
+    },
+    {
+      "id": 52,
+      "name": "John Doe",
+      "email": "johndoe@gmail.com"
+    },
+    {
+      "id": 53,
+      "name": "Maverick Vinales",
+      "email": "maverick@gmail.com"
+    },
+    {
+      "id": 54,
+      "name": "Andrea Ianone",
+      "email": "andrea@gmail.com"
+    },
+    {
+      "id": 55,
+      "name": "Marc Marquez",
+      "email": "marc@gmail.com"
+    },
+    {
+      "id": 56,
+      "name": "Gede Lumbung",
+      "email": "gedesumawijaya@gmail.com"
+    },
+    {
+      "id": 57,
+      "name": "John Doe",
+      "email": "johndoe@gmail.com"
+    },
+    {
+      "id": 58,
+      "name": "Maverick Vinales",
+      "email": "maverick@gmail.com"
+    },
+    {
+      "id": 59,
+      "name": "Andrea Ianone",
+      "email": "andrea@gmail.com"
+    },
+    {
+      "id": 60,
+      "name": "Marc Marquez",
+      "email": "marc@gmail.com"
+    },
+    {
+      "id": 61,
+      "name": "Gede Lumbung",
+      "email": "gedesumawijaya@gmail.com"
+    },
+    {
+      "id": 62,
+      "name": "John Doe",
+      "email": "johndoe@gmail.com"
+    },
+    {
+      "id": 63,
+      "name": "Maverick Vinales",
+      "email": "maverick@gmail.com"
+    },
+    {
+      "id": 64,
+      "name": "Andrea Ianone",
+      "email": "andrea@gmail.com"
+    },
+    {
+      "id": 65,
+      "name": "Marc Marquez",
+      "email": "marc@gmail.com"
+    },
+    {
+      "id": 66,
+      "name": "Gede Lumbung",
+      "email": "gedesumawijaya@gmail.com"
+    },
+    {
+      "id": 67,
+      "name": "John Doe",
+      "email": "johndoe@gmail.com"
+    },
+    {
+      "id": 68,
+      "name": "Maverick Vinales",
+      "email": "maverick@gmail.com"
+    },
+    {
+      "id": 69,
+      "name": "Andrea Ianone",
+      "email": "andrea@gmail.com"
+    },
+    {
+      "id": 70,
+      "name": "Marc Marquez",
+      "email": "marc@gmail.com"
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "title": "Superadmin",
+      "slug": "superadmin"
+    },
+    {
+      "id": 2,
+      "title": "Operator",
+      "slug": "operator"
+    },
+    {
+      "id": 3,
+      "title": "Sales",
+      "slug": "sales"
+    }
+  ],
+  "permissions": [
+    {
+      "id": 1,
+      "title": "User Management"
+    },
+    {
+      "id": 2,
+      "title": "Role Management"
+    },
+    {
+      "id": 3,
+      "title": "Permission Management"
+    }
+  ]
+}
